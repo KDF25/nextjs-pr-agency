@@ -1,0 +1,36 @@
+{
+    "HomePage" : {
+        "SecondHome" : {
+            "title" : "Bizning faoliyatimiz haqida?"
+        },
+        "ThirdHome" : {
+            "title": "Bizning yutuqlarimiz"
+        },
+        "FourthHome": {
+            "title": "Bizning xizmatlar",
+            "subtitle": "Bizning ayrim boshqa imkoniyatlarimiz bilan tanishing:"
+        },
+        "FifthHome" : {
+            "title": "Bizning ishlarimiz bilan tanishing"
+        },
+        "EighthHome" : {
+            "contactTitle": "Biz bilan bo'glanish",
+            "firstName": "Ism",
+            "lastName": "Familiya",
+            "email": "Email",
+            "phoneNumber": "Telefon raqami",
+            "message": "Xabar",
+            "submitButton": "Xabar yuborish",
+            "alert": "Xabar muvaffaqiyatli yetkazib berildi. Fikr-mulohazangiz uchun rahmat!"
+        }
+    },
+        "WhyPage": {
+            "SecondSection": {
+                 "title": "Bizning imkoniyatlarimiz"
+            },
+            "FourthSection": {
+                "title": "Loyihalar orasida:"
+            }
+    }
+}
+

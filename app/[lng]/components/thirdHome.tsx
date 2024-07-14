@@ -2,21 +2,19 @@ import ContentAdminEdit from "@/app/adminvenkon/components/contentAdminEdit";
 import { IHomePageProps } from "@/types/user";
 import Image from "next/image";
 import styles from "../styles/ThirdHome.module.css";
+import { useTranslation } from "@/app/i18n";
 
-const ThirdHome: React.FC<IHomePageProps> = ({
+const ThirdHome: React.FC<IHomePageProps> = async ({
   section,
   isAdmin,
   pageId,
   lng,
 }) => {
+  const { t } = await useTranslation(lng);
   return (
     <div className="why-wrapper">
       <h2 className={styles.third_main_title}>
-        {lng === "ru"
-          ? "Наши достижения"
-          : lng === "en"
-          ? "Our achievements"
-          : "Bizning yutuqlarimiz"}
+        {t("HomePage.ThirdHome.title")}
       </h2>
       <div className={styles.third_wrapper}>
         <div className={styles.third_texts}>

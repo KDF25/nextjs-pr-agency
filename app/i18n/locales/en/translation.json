@@ -1,0 +1,35 @@
+{
+    "HomePage" : {
+        "SecondHome" : {
+            "title" : "What we do?"
+        },
+        "ThirdHome" : {
+            "title": "Our achievements"
+        },
+        "FourthHome": {
+            "title": "Our services",
+            "subtitle": "Here are some of our other options:"
+        },
+        "FifthHome" : {
+            "title": "Our works"
+        },
+        "EighthHome" : {
+            "contactTitle": "Contact Us",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone number",
+            "message": "Message",
+            "submitButton": "Send message",
+            "alert": "The message was successfully delivered. Thank you for your feedback!"
+        }
+    } ,
+    "WhyPage": {
+        "SecondSection": {
+            "title": "Our possibilities"
+        },
+        "FourthSection": {
+            "title": "Among our projects:"
+       }
+    }
+}

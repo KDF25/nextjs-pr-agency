@@ -3,6 +3,7 @@
 import ContentAdminAdd from "@/app/adminvenkon/components/contentAdminAdd";
 import ContentAdminEdit from "@/app/adminvenkon/components/contentAdminEdit";
 import ContentAdminRemove from "@/app/adminvenkon/components/contentAdminRemove";
+import { useTranslation } from "@/app/i18n/client";
 import { IHomePageProps } from "@/types/user";
 import Image from "next/image";
 import { useState } from "react";
@@ -15,6 +16,7 @@ const FourthSection: React.FC<IHomePageProps> = ({
   pageId,
   lng,
 }) => {
+  const { t } = useTranslation(lng);
   const [expandedBlocks, setExpandedBlocks] = useState(
     Array(section?.blocks.length).fill(false)
   );
@@ -31,11 +33,7 @@ const FourthSection: React.FC<IHomePageProps> = ({
   return (
     <div className="why-wrapper">
       <h2 className={titleStyle.why_sec_title}>
-        {lng === "ru"
-          ? "Среди наших проектов:"
-          : lng === "en"
-          ? "Among our projects:"
-          : "Loyihalar orasida:"}
+        {t("WhyPage.FourthSection.title")}
       </h2>
       <div className={styles.fourth_projects}>
         {section?.blocks.map((block, index) => (

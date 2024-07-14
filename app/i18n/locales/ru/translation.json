@@ -1,0 +1,35 @@
+{
+    "HomePage" : {
+        "SecondHome" : {
+            "title" : "Что мы делаем?"
+        }, 
+        "ThirdHome" : {
+            "title": "Наши достижения"
+        },
+        "FourthHome": {
+            "title": "Наши услуги",
+            "subtitle": "Вот еще некоторые наши возможности:"
+        },
+        "FifthHome" : {
+            "title": "Наши работы"
+        },
+        "EighthHome" : {
+            "contactTitle": "Связаться с нами",
+            "firstName": "Имя",
+            "lastName": "Фамилия",
+            "email": "Email",
+            "phoneNumber": "Телефон",
+            "message": "Сообщение",
+            "submitButton": "Отправить сообщение",
+            "alert": "Сообщение успешно доставлено. Спасибо за обращение!"
+        }
+    },
+    "WhyPage": {
+        "SecondSection": {
+             "title": "Наши возможности"
+        },
+        "FourthSection": {
+            "title": "Среди наших проектов:"
+       }
+    }
+}

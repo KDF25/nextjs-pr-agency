@@ -3,6 +3,7 @@
 import ContentAdminAdd from "@/app/adminvenkon/components/contentAdminAdd";
 import ContentAdminEdit from "@/app/adminvenkon/components/contentAdminEdit";
 import ContentAdminRemove from "@/app/adminvenkon/components/contentAdminRemove";
+import { useTranslation } from "@/app/i18n/client";
 import { IHomePageProps } from "@/types/user";
 import Image from "next/image";
 import React from "react";
@@ -21,14 +22,11 @@ const FifthHome: React.FC<IHomePageProps> = ({
   lng,
 }) => {
   const isMobile = useMediaQuery({ maxWidth: 576 });
+  const { t } = useTranslation(lng);
   return (
     <div className="why-wrapper">
       <h2 className={styles.fifth_main_title}>
-        {lng === "ru"
-          ? "Наши работы"
-          : lng === "en"
-          ? "Our works"
-          : "Bizning ishlarimiz bilan tanishing"}
+        {t("HomePage.FifthHome.title")}
       </h2>
       <Swiper
         className={styles.my_swiper}

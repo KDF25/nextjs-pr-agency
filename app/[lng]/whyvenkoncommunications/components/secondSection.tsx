@@ -3,6 +3,7 @@
 import ContentAdminAdd from "@/app/adminvenkon/components/contentAdminAdd";
 import ContentAdminEdit from "@/app/adminvenkon/components/contentAdminEdit";
 import ContentAdminRemove from "@/app/adminvenkon/components/contentAdminRemove";
+import { useTranslation } from "@/app/i18n/client";
 import { IHomePageProps } from "@/types/user";
 import Image from "next/image";
 import { Navigation } from "swiper";
@@ -18,14 +19,11 @@ const SecondSection: React.FC<IHomePageProps> = ({
   pageId,
   lng,
 }) => {
+  const { t } = useTranslation(lng);
   return (
     <div className="why-wrapper">
       <h2 className={styles.why_sec_title}>
-        {lng === "ru"
-          ? "Наши возможности"
-          : lng === "en"
-          ? "Our possibilities"
-          : "Bizning imkoniyatlarimiz"}
+        {t("WhyPage.SecondSection.title")}
       </h2>
       <Swiper
         slidesPerView={1}

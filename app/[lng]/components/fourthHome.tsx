@@ -1,29 +1,24 @@
 import ContentAdminEdit from "@/app/adminvenkon/components/contentAdminEdit";
+import { useTranslation } from "@/app/i18n";
 import { IHomePageProps } from "@/types/user";
 import styles from "../styles/FourthHome.module.css";
 
-const FourthHome: React.FC<IHomePageProps> = ({
+const FourthHome: React.FC<IHomePageProps> = async ({
   section,
   isAdmin,
   pageId,
   lng,
 }) => {
+  const { t } = await useTranslation(lng);
+
   return (
     <div className="why-wrapper">
       <div className={styles.fourth_title_block}>
         <h2 className={styles.fourth_main_title}>
-          {lng === "ru"
-            ? "Наши услуги"
-            : lng === "en"
-            ? "Our services"
-            : "Bizning xizmatlar"}
+          {t("HomePage.FourthHome.title")}
         </h2>
         <h3 className={styles.fourth_sec_title}>
-          {lng === "ru"
-            ? "Вот еще некоторые наши возможности:"
-            : lng === "en"
-            ? "Here are some of our other options:"
-            : "Bizning ayrim boshqa imkoniyatlarimiz bilan tanishing:"}
+          {t("HomePage.FourthHome.subtitle")}
         </h3>
       </div>
       <div className={styles.fourth_wrapper}>
