@@ -3,6 +3,8 @@ import { TheHeader } from "@/app/components/header/header";
 import { ILangPageProps } from "@/types/user";
 import "bootstrap/dist/css/bootstrap.css";
 import { dir } from "i18next";
+import { appWithTranslation } from 'next-i18next';
+import { AppProps } from "next/app";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { ReactNode } from "react";
@@ -95,4 +97,10 @@ const RootLayout: React.FC<RootLayoutProps> = ({
   );
 };
 
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return <RootLayout params={{ lng: pageProps.lng, }} children={Component as unknown as ReactNode} />;
+};
+
+// export default appWithTranslation(MyApp);
 export default RootLayout;
+

@@ -3,8 +3,13 @@ import FirstSection from "./components/firstSection";
 import SecondSection from "./components/secondSection";
 import FourthSection from "./components/fourthSection";
 import ThirdSection from "./components/thirdSection";
+import { ILangPageProps } from "@/types/user";
 
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata({
+  params: { lng },
+}: {
+  params: ILangPageProps;
+}) {
   const pageId = 3;
   const response = await getData(pageId, lng);
   return {
@@ -14,24 +19,23 @@ export async function generateMetadata({ params: { lng } }) {
   };
 }
 
-export default async function WhyWe({ params: { lng } }) {
+export default async function WhyWe({
+  params: { lng },
+}: {
+  params: ILangPageProps;
+}) {
   const pageId = 3;
   const response = await getData(pageId, lng);
+  const Sections = [FirstSection, SecondSection, ThirdSection, FourthSection];
+
   return (
     <>
       <div>
-        <div>
-          <FirstSection section={response?.sections[0]} />
-        </div>
-        <div>
-          <SecondSection section={response?.sections[1]} lng={lng} />
-        </div>
-        <div>
-          <ThirdSection section={response?.sections[2]} lng={lng} />
-        </div>
-        <div>
-          <FourthSection section={response?.sections[3]} lng={lng} />
-        </div>
+        {Sections.map((SectionComponent, index) => (
+          <div key={index}>
+            <SectionComponent section={response?.sections[index]} lng={lng} />
+          </div>
+        ))}
       </div>
     </>
   );

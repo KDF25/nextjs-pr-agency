@@ -30,30 +30,23 @@ export default async function Home({
 }) {
   const pageId = 2;
   const response = await getData(pageId, lng);
+  const Sections = [
+    FirstHome,
+    SecondHome,
+    ThirdHome,
+    FourthHome,
+    FifthHome,
+    SixthHome,
+    SeventhHome,
+  ];
 
   return (
     <>
-      <div>
-        <FirstHome section={response?.sections[0]} lng={lng} />
-      </div>
-      <div>
-        <SecondHome section={response?.sections[1]} lng={lng} />
-      </div>
-      <div>
-        <ThirdHome section={response?.sections[2]} lng={lng} />
-      </div>
-      <div>
-        <FourthHome section={response?.sections[3]} lng={lng} />
-      </div>
-      <div>
-        <FifthHome section={response?.sections[4]} lng={lng} />
-      </div>
-      <div>
-        <SixthHome section={response?.sections[5]} lng={lng} />
-      </div>
-      <div>
-        <SeventhHome section={response?.sections[6]} lng={lng} />
-      </div>
+      {Sections.map((SectionComponent, index) => (
+        <div key={index}>
+          <SectionComponent section={response?.sections[index]} lng={lng} />
+        </div>
+      ))}
       <div>
         <EighthHome lng={lng} />
       </div>
