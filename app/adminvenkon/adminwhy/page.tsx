@@ -7,16 +7,14 @@ import ThirdSection from "@/app/[lng]/whyvenkoncommunications/components/thirdSe
 import { languageEnum, languages } from "@/app/i18n/settings";
 import { getData } from "@/services/getData";
 import { IUserData } from "@/types/user";
-import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import SeoAdmin from "../components/seoAdmin";
-import { AuthContext } from "../layout";
+import { AuthContext } from "../context";
 
 export default function WhyUsAdmin() {
   const { isAuth } = useContext(AuthContext);
   const [data, setData] = useState<{ [x: string]: IUserData }[]>([]);
   const pageId = 3;
-  const router = useRouter();
   const Sections = [FirstSection, SecondSection, ThirdSection, FourthSection];
 
   useEffect(() => {

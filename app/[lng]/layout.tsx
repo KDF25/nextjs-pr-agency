@@ -3,30 +3,13 @@ import { TheHeader } from "@/app/components/header/header";
 import { IHomePageProps } from "@/types/user";
 import "bootstrap/dist/css/bootstrap.css";
 import { dir } from "i18next";
+import { Metadata } from 'next';
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { ReactNode } from "react";
 import "../global.css";
 import { languages } from "../i18n/settings";
 
-interface Metadata {
-  title: string;
-  description: string;
-  openGraph: {
-    title: string;
-    description: string;
-    url: string;
-    siteName: string;
-    images: {
-      url: string;
-      width: number;
-      height: number;
-      alt?: string;
-    }[];
-    locale: string;
-    type: string;
-  };
-}
 
 export const metadata: Metadata = {
   title: "Venkon Communications",

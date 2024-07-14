@@ -3,7 +3,7 @@
 import { Auth } from "@/services/admin";
 import Link from "next/link";
 import { useContext, useState } from "react";
-import { AuthContext } from "../layout";
+import { AuthContext } from "../context";
 import styles from "../styles/AuthAdmin.module.css";
 
 export default function AuthAdmin() {

@@ -10,16 +10,14 @@ import ThirdHome from "@/app/[lng]/components/thirdHome";
 import { languageEnum, languages } from "@/app/i18n/settings";
 import { getData } from "@/services/getData";
 import { IUserData } from "@/types/user";
-import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import SeoAdmin from "../components/seoAdmin";
-import { AuthContext } from "../layout";
+import { AuthContext } from "../context";
 
 export default function HomeAdmin() {
   const { isAuth } = useContext(AuthContext);
   const [data, setData] = useState<{ [x: string]: IUserData }[]>([]);
   const pageId = 2;
-  const router = useRouter();
   const Sections = [
     FirstHome,
     SecondHome,

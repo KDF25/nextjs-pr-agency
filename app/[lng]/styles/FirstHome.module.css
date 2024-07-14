@@ -10,8 +10,8 @@
 .first_texts {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   max-width: 40%;
   margin-right: 10%;
 }
@@ -124,8 +124,8 @@
   .first_wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     -webkit-align-items: start;
     -webkit-justify-content: start;
     -webkit-box-pack: start;
